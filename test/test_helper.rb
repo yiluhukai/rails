@@ -7,4 +7,8 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  # 检验用户是否登陆
+  def is_logged_in?
+    !session[:user_id].nil?
+  end
 end
